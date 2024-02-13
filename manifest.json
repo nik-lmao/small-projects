@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "nik's extension",
+    "description": "my amazing extension",
+    "version": "1.0",
+    "action": {
+      "default_popup": "readingTimeCalculator.html",
+      "default_icon": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["script.js"]
+      }
+    ]
+  }

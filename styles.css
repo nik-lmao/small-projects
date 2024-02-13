@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+.page {
+    width: 300px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+}
+
+a {
+    color: white;
+    font: bold;
+}
