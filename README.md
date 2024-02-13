@@ -14,15 +14,15 @@ git clone https://github.com/nik-lmao/readingtime-calculator
 
 - In the top right corner click on the "enable developer mode" button.
 
-<img src="./images/1.png" width="300px">
+<img src="./images/1.png" width="600px">
 
 - Click on the "load unpacked" button in the top left corner.
 
-<img src="./images/2.png" width="300px">
+<img src="./images/2.png" width="600px">
 
 - Select the path to the extension. (`./readingtime-calculator/readingtime-calculator`)
 
-<img src="./images/3.png" width="300px">
+<img src="./images/3.png" width="600px">
 
 - The extension should appear in the menu.
 
@@ -30,4 +30,4 @@ git clone https://github.com/nik-lmao/readingtime-calculator
 
 ### 💎 | This extension will show you a little overlay where you can see the estimated reading time on this website.
 
-<img src="./images/4.png" width="300px">
+<img src="./images/4.png" width="600px">
