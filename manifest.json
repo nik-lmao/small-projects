@@ -1,8 +1,13 @@
 {
     "manifest_version": 3,
-    "name": "nik's extension",
-    "description": "my amazing extension",
+    "name": "⌛ | Reading Time Calculator",
+    "description": "This browser extension was made to calculate the reading time on websites. It will show a small popup on any site which tells you how long you'll have to read the contents of the page.",
     "version": "1.0",
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
     "action": {
       "default_popup": "readingTimeCalculator.html",
       "default_icon": "icon.png"
@@ -13,4 +18,4 @@
         "js": ["script.js"]
       }
     ]
-  }
+}
