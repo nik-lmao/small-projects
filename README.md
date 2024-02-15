@@ -20,7 +20,7 @@ git clone https://github.com/nik-lmao/readingtime-calculator
 
 <img src="./images/2.png" width="600px">
 
-- Select the path to the extension. (`./readingtime-calculator/readingtime-calculator`)
+- Select the path to the extension. (`./readingtime-calculator/extension`)
 
 <img src="./images/3.png" width="600px">
 
