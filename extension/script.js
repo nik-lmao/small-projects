@@ -35,7 +35,7 @@ function displayReadingTime(){
         readingTimeDisplay.textContent = `⌛ | Reading Time: ${readingTime} minutes`;
     }
 
-    // Reading Time Display
+    // Reading Time Styles
     
     readingTimeDisplay.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
     readingTimeDisplay.style.borderRadius = "5px";
