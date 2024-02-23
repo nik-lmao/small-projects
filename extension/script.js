@@ -51,10 +51,24 @@ function displayReadingTime(){
     readingTimeDisplay.style.color = "white";
     readingTimeDisplay.style.fontFamily = "Arial, sans-serif";
     readingTimeDisplay.style.fontWeight = "bold";
+    
+    // Reading Time Display Hover
+
+    readingTimeDisplay.onmouseover = function(){
+        readingTimeDisplay.style.cursor = "pointer";
+    }
+
+    // Close Reading Time Display
+
+    readingTimeDisplay.onclick = function(){
+        readingTimeDisplay.style.display = "none";
+    }
 
     // Append to body
     
     document.body.appendChild(readingTimeDisplay);
 }
+
+// Call function
 
 displayReadingTime();
