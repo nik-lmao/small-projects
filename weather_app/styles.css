@@ -1,0 +1,32 @@
+body {
+    overflow: hidden;
+    background-color: black;
+}
+
+.temperatures {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.temperature_h {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 500%;
+    font-weight: bold;
+
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    display: block;
+}
+
+.temperature {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    display: block;
+}
