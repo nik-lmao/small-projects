@@ -8,12 +8,19 @@
     
 </head>
 <body>
-    <h1 id="header">Online Text Editor</h1>
+    <h1 class="header">Online Text Editor</h1>
     
     <textarea id="text" placeholder="Enter your text here..."></textarea>
 
-    <button id="save">Download</button>
-    
+    <button id="download" class="button">Download</button>
+    <!-- Hide settings later -->
+    <div id="settings">
+      <h1 class="header">Settings</h1>
+      <p class="setting-name">Font</p>
+      <input id="font-name" class="setting-input">
+      <button id="save" class="button">Save</button>
+    </div>
+  
     <script src="index.js"></script>
 </body>
 </html>
