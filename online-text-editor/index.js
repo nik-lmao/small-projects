@@ -75,6 +75,21 @@ document.getElementById("save").onclick = function() {
     document.getElementById("settings").style.display = "none";
 }
 
+document.getElementById("reset").onclick = function() {
+    localStorage.setItem("font", "Arial");
+    localStorage.setItem("size", 16);
+    localStorage.setItem("color", "white");
+
+    const text = document.querySelector("#text");
+    text.style.fontFamily = localStorage.getItem("font");
+    text.style.fontSize = localStorage.getItem("size") + "px";
+    text.style.color = localStorage.getItem("color");
+
+    document.getElementById("font-name").value = localStorage.getItem("font");
+    document.getElementById("font-size").value = localStorage.getItem("size");
+    document.getElementById("font-color").value = localStorage.getItem("color");
+}
+
 document.getElementById("upload").onclick = function() {
     const input = document.createElement('input');
     input.type = 'file';
