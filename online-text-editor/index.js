@@ -2,13 +2,16 @@ window.onload = function() {
     const font = localStorage.getItem("font");
     const size = localStorage.getItem("size");
     const color = localStorage.getItem("color");
+    const savedText = localStorage.getItem("text");
 
-    if(font && size && color) {
+    if(font && size && color && savedText) {
         const text = document.querySelector("#text");
 
         text.style.fontFamily = font;
         text.style.fontSize = size + "px";
         text.style.color = color;
+
+        document.getElementById("text").value = savedText;
     }
     else {
         localStorage.setItem("font", "Arial");
@@ -21,8 +24,8 @@ window.onload = function() {
         text.style.fontSize = localStorage.getItem("size") + "px";
         text.style.color = localStorage.getItem("color");
     }
-    
 }
+
 
 document.getElementById("download").onclick = function() {
     const text = document.getElementById("text").value;
@@ -47,6 +50,7 @@ document.getElementById("save").onclick = function() {
     const font = document.getElementById("font-name").value;
     const size = document.getElementById("font-size").value;
     const color = document.getElementById("font-color").value;
+    const music = document.getElementById("music").value;
 
     if(font == "" || size == "" || color == "") {
         alert("Please fill in all the fields.");
@@ -56,6 +60,7 @@ document.getElementById("save").onclick = function() {
     localStorage.setItem("font", font);
     localStorage.setItem("size", size);
     localStorage.setItem("color", color);
+    localStorage.setItem("music", music);
 
     // Applying settings
     
@@ -89,5 +94,17 @@ document.getElementById("settings-button").onclick = function() {
     document.getElementById("font-name").value = localStorage.getItem("font");
     document.getElementById("font-size").value = localStorage.getItem("size");
     document.getElementById("font-color").value = localStorage.getItem("color");
+    document.getElementById("music").value = localStorage.getItem("music");
     document.getElementById("settings").style.display = "block";
+}
+
+document.getElementById("text").oninput = function() {
+    localStorage.setItem("text", document.getElementById("text").value);
+}
+
+document.getElementById("music").onclick = function() {
+    const audio = new Audio("background-music.mp3");
+    audio.loop = true;
+    audio.volume = 0.2;
+    audio.play();
 }
