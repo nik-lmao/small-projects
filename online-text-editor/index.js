@@ -1,4 +1,7 @@
+var musicPlaying = false;
+
 window.onload = function() {
+
     const font = localStorage.getItem("font");
     const size = localStorage.getItem("size");
     const color = localStorage.getItem("color");
@@ -50,7 +53,6 @@ document.getElementById("save").onclick = function() {
     const font = document.getElementById("font-name").value;
     const size = document.getElementById("font-size").value;
     const color = document.getElementById("font-color").value;
-    const music = document.getElementById("music").value;
 
     if(font == "" || size == "" || color == "") {
         alert("Please fill in all the fields.");
@@ -60,7 +62,6 @@ document.getElementById("save").onclick = function() {
     localStorage.setItem("font", font);
     localStorage.setItem("size", size);
     localStorage.setItem("color", color);
-    localStorage.setItem("music", music);
 
     // Applying settings
     
@@ -84,6 +85,7 @@ document.getElementById("upload").onclick = function() {
         reader.onload = function(e) {
             const contents = e.target.result;
             document.getElementById("text").value = contents;
+            localStorage.setItem("text", contents);
         };
         reader.readAsText(file);
     };
@@ -94,7 +96,6 @@ document.getElementById("settings-button").onclick = function() {
     document.getElementById("font-name").value = localStorage.getItem("font");
     document.getElementById("font-size").value = localStorage.getItem("size");
     document.getElementById("font-color").value = localStorage.getItem("color");
-    document.getElementById("music").value = localStorage.getItem("music");
     document.getElementById("settings").style.display = "block";
 }
 
@@ -103,8 +104,15 @@ document.getElementById("text").oninput = function() {
 }
 
 document.getElementById("music").onclick = function() {
-    const audio = new Audio("background-music.mp3");
-    audio.loop = true;
-    audio.volume = 0.2;
-    audio.play();
+    if(!musicPlaying) {
+        const audio = new Audio("background-music.mp3");
+        audio.loop = true;
+        audio.volume = 0.2;
+        audio.play();
+        musicPlaying = true;
+    }
+    else {
+        location.reload();
+    }
+    
 }

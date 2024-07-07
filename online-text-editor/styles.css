@@ -1,19 +1,107 @@
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(128, 128, 128, 0.24);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: default;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
 
 body {
-  background-color: black;
-  overflow-x: hidden;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 50px
+    ),
+    repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 50px
+    ),
+    black;
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 68, 255);
+  text-shadow: rgb(0, 68, 255) 0px 0px 30px;
+  font-size: 40px;
+  cursor: pointer;
+
+  transition: all 0.1s ease 0s;
+
+  
+}
+
+.icon2 {
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 60, 0);
+  text-shadow: rgb(255, 60, 0) 0px 0px 30px;
+  
+  cursor: pointer;
+
+  transition: all 0.1s ease 0s;
+}
+
+.icon2:hover,
+.icon:hover {
+  color: white;
+  text-shadow: white 0px 0px 30px;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(transparent, black 60%);
 }
 
 .header {
   display: block;
-  margin: 10px auto;
+  margin: auto;
+  padding-top: 40px;
+  margin-bottom: 20px;
   width: max-content;
 
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
   color: white;
+  text-shadow: white 0px 0px 30px;
 }
 
 #text {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  resize: none;
   display: block;
   width: 80vw;
   height: 60vh;
@@ -26,33 +114,39 @@ body {
 
   background: rgb(255, 255, 255, 0.1);
 
-  border: 5px solid white;
+  border: 5px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
+
+
+  text-shadow: white 0px 0px 10px;
 }
 
-#text:focus{
+#text:focus {
   outline: none;
 }
-.buttons {
-  display: block;
-  margin: 20px auto;
-  width: max-content;
-  height: max-content;
+
+.buttons1 {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+
+.buttons2{
+  position: absolute;
+  top: 40px;
+  right: 20px;
 }
 
 .button {
-  margin: 20px auto;
+  margin: 0 auto;
   width: 100px;
   height: 50px;
-  
+
   background-color: rgb(255,255,255,0.8);
   border: 2px solid white;
   border-radius: 5px;
-  
-  color: black;
 
-  border: none;
-  border-radius: 5px;
+  color: black;
   cursor: pointer;
   font-size: 16px;
 
@@ -67,7 +161,7 @@ body {
   background-color: rgb(255,255,255,0.5);
 }
 
-.setting-input{
+.setting-input {
   display: block;
   width: 20vw;
   margin: 10px auto;
@@ -76,42 +170,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 16px;
-  
+
   background: rgb(255, 255, 255, 0.1);
 
   border: 2px solid white;
   border-radius: 5px;
 }
-.setting-input:focus{
+
+.setting-input:focus {
   outline: none;
 }
+
 .setting-name {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
-  font-weight: bold ;
+  font-weight: bold;
   width: max-content;
   margin: 5px auto;
-}
-
-.button-centered {
-  display: block;
-  margin: 20px auto;
-  width: 100px;
-  height: 50px;
-  
-  background-color: rgb(255,255,255,0.8);
-  border: 2px solid white;
-  border-radius: 5px;
-  
-  color: black;
-
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-
-  transition: all 0.1s ease 0s;
 }
 
 #settings {
@@ -122,4 +198,5 @@ body {
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
+  text-align: center;
 }

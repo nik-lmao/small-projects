@@ -5,37 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Text Editor</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <h1 class="header">Online Text Editor</h1>
+    <div class="page">
+      <h1 class="header">Online Text Editor</h1>
+      <div class="buttons2">
+        <button id="music" class="icon"><span class="material-symbols-outlined">music_note</span></button>
+        <button id="settings-button" class="icon"><span class="material-symbols-outlined">settings</span></button>
+      </div>
     
-    <textarea id="text" placeholder="Enter your text here..."></textarea>
+      <textarea id="text" placeholder="Enter your text here..."></textarea>
+      
+      <div class="buttons1">
+        <button id="upload" class="icon2"><span class="material-symbols-outlined">upload</span></button>
+        <button id="download" class="icon2"><span class="material-symbols-outlined">download</span></button>
+      </div>
+
+      
+      
+
+      <div id="settings">
+        <h1 class="header">Settings</h1>
+        <p class="setting-name">Font</p>
+        <input id="font-name" class="setting-input">
+        <p class="setting-name">Font Size</p>
+        <input id="font-size" class="setting-input">
+        <p class="setting-name">Font Color</p>
+        <input id="font-color" class="setting-input">
+
+        <button id="save" class="icon"><span class="material-symbols-outlined">save</span></button>
+      </div>
+    </div>
     
-    <div class="buttons">
-      <button id="upload" class="button">Upload</button>
-      <button id="download" class="button">Download</button>
-    </div>
-
-    <div class="buttons">
-      <button id="music" class="button">Music</button>
-      <button id="settings-button" class="button">Settings</button>
-    </div>
-    
-
-    <div id="settings">
-      <h1 class="header">Settings</h1>
-      <p class="setting-name">Font</p>
-      <input id="font-name" class="setting-input">
-      <p class="setting-name">Font Size</p>
-      <input id="font-size" class="setting-input">
-      <p class="setting-name">Font Color</p>
-      <input id="font-color" class="setting-input">
-      <p class="setting-name">Music</p>
-      <input id="music" class="setting-input">
-
-      <button id="save" class="button button-centered">Save</button>
-    </div>
   
     <script src="index.js"></script>
 </body>
