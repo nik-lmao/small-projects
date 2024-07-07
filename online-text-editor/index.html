@@ -11,14 +11,25 @@
     <h1 class="header">Online Text Editor</h1>
     
     <textarea id="text" placeholder="Enter your text here..."></textarea>
+    
+    <div class="buttons">
+      <button id="upload" class="button">Upload</button>
+      <button id="download" class="button">Download</button>
+    </div>
 
-    <button id="download" class="button">Download</button>
-    <!-- Hide settings later -->
+    <button id="settings-button" class="button button-centered">Settings</button>
+
+    
+    
     <div id="settings">
       <h1 class="header">Settings</h1>
       <p class="setting-name">Font</p>
       <input id="font-name" class="setting-input">
-      <button id="save" class="button">Save</button>
+      <p class="setting-name">Font Size</p>
+      <input id="font-size" class="setting-input">
+      <p class="setting-name">Font Color</p>
+      <input id="font-color" class="setting-input">
+      <button id="save" class="button button-centered">Save</button>
     </div>
   
     <script src="index.js"></script>

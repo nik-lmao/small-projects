@@ -1,7 +1,7 @@
 
-
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 .header {
@@ -16,8 +16,8 @@ body {
 #text {
   display: block;
   width: 80vw;
-  height: 80vh;
-  margin: auto;
+  height: 60vh;
+  margin: 20px auto;
   padding: 10px 10px;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -33,9 +33,14 @@ body {
 #text:focus{
   outline: none;
 }
+.buttons {
+  display: block;
+  margin: 20px auto;
+  width: max-content;
+  height: max-content;
+}
 
 .button {
-  display: block;
   margin: 20px auto;
   width: 100px;
   height: 50px;
@@ -65,13 +70,13 @@ body {
 .setting-input{
   display: block;
   width: 20vw;
-  margin: auto;
+  margin: 10px auto;
   padding: 3px 3px;
 
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  font-size: 12px;
-
+  font-size: 16px;
+  
   background: rgb(255, 255, 255, 0.1);
 
   border: 2px solid white;
@@ -83,6 +88,38 @@ body {
 .setting-name {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold ;
   width: max-content;
   margin: 5px auto;
+}
+
+.button-centered {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+  height: 50px;
+  
+  background-color: rgb(255,255,255,0.8);
+  border: 2px solid white;
+  border-radius: 5px;
+  
+  color: black;
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  transition: all 0.1s ease 0s;
+}
+
+#settings {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
 }
